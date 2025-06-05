@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request a Quote | Ciwan Contracting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>CIWAN CONTRACTING INC. &nbsp;|&nbsp; <span style="color:white; font-weight:normal;">(123) 456-7890</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section id="quote">
+    <h2>Request a Quote</h2>
+    <form class="quote-form" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" />
+      <input type="tel" name="phone" placeholder="Your Phone" />
+      <select name="service">
+        <option>Basement Renovation</option><option>Kitchen Remodel</option><option>Bathroom Renovation</option>
+        <option>Framing & Drywall</option><option>Painting</option><option>Flooring</option>
+        <option>Tiling</option><option>Deck/Fence</option><option>Other</option>
+      </select>
+      <textarea name="details" placeholder="Project details..." rows="4"></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Our Location</h2>
+    <iframe src="https://maps.google.com/maps?q=Toronto&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <section>
+    <h2>Review Us</h2>
+    <div class="qr-review">
+      <img src="qr-code-placeholder.png" alt="QR Code to Review Us" width="150" />
+      <p>Scan to leave us a review on Google</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <div class="card">Phone: (123) 456-7890</div>
+      <div class="card">Email: info@ciwancontracting.com</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Socials</h2>
+    <div class="services-list">
+      <div class="card"><img src="placeholder-facebook.png" alt="Facebook" width="32" /> Facebook</div>
+      <div class="card"><img src="placeholder-instagram.png" alt="Instagram" width="32" /> Instagram</div>
+      <div class="card"><img src="placeholder-twitter.png" alt="Twitter" width="32" /> Twitter</div>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Ciwan Contracting Inc. All rights reserved.</footer>
+</body>
+</html>
