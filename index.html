@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciwan Contracting Inc.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: gold;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: gold;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('hero-placeholder.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-text {
+      z-index: 1;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #d4af37;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: gold;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>CIWAN CONTRACTING INC.</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#quote">Request a Quote</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">Quality Craftsmanship Since 2013</div>
+  </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>With over a decade of experience, Ciwan Contracting Inc. delivers high-quality renovations and construction services across Ontario. We specialize in residential and commercial projects, always putting craftsmanship, professionalism, and customer satisfaction first.</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Ciwan Contracting Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
