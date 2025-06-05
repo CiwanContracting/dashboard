@@ -198,3 +198,28 @@ footer {
   height: 100%;
   border: none;
 }
+
+
+/* Map container responsive sizing (already present) */
+
+/* Social buttons */
+.button-social {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin: 0.5rem 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-social:hover {
+  background-color: gold;
+  color: #1a1a1a;
+}
+
+/* Remove grid style for social placeholder cards and replace with flex */
+.services-list .card img {
+  vertical-align: middle;
+}
