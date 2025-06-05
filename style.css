@@ -1,3 +1,4 @@
+
 html { scroll-behavior: smooth; }
 body { 
   margin: 0; 
@@ -118,26 +119,57 @@ h2 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
 }
 
-/* Services & Projects & Contact grid */
-.services-list, 
-.projects-grid, 
-.contact-info { 
+/* Services grid */
+.services-list { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1rem; 
+  margin-top: 1rem; 
+}
+.services-list .card { 
+  background: #1a1a1a; 
+  color: #fff; 
+  padding: 1.5rem; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+  text-align: center; 
+  font-weight: bold; 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+.services-list .card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
+}
+
+/* Projects & Testimonials & Contact grid */
+.projects-grid, .contact-info { 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 1rem; 
 }
-
-/* Card hover effect */
-.card { 
+.projects-grid .card, .contact-info .card { 
   background: #f7f7f7; 
   padding: 1rem; 
   border-radius: 8px; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
   transition: transform 0.3s, box-shadow 0.3s; 
 }
-.card:hover { 
+.projects-grid .card:hover, .contact-info .card:hover { 
   transform: translateY(-4px); 
   box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+}
+
+/* Map container */
+.map-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Quote form */
@@ -148,9 +180,7 @@ h2 {
   max-width: 600px; 
   margin: auto; 
 }
-.quote-form input, 
-.quote-form select, 
-.quote-form textarea { 
+.quote-form input, .quote-form select, .quote-form textarea { 
   padding: 0.75rem; 
   font-size: 1rem; 
   border: 1px solid #ccc; 
@@ -169,39 +199,6 @@ h2 {
   background-color: #bfa22e; 
 }
 
-/* Footer */
-footer { 
-  background: #1a1a1a; 
-  color: gold; 
-  text-align: center; 
-  padding: 1rem; 
-  margin-top: 2rem; 
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .why-choose-container { flex-wrap: wrap; }
-  .center-quote { order: 3; width: 100%; margin-top: 0.5rem; }
-  nav { order: 2; width: 100%; justify-content: center; }
-}
-
-
-/* Map container responsive sizing */
-.map-container {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
-/* Map container responsive sizing (already present) */
-
 /* Social buttons */
 .button-social {
   display: inline-block;
@@ -219,7 +216,24 @@ footer {
   color: #1a1a1a;
 }
 
-/* Remove grid style for social placeholder cards and replace with flex */
-.services-list .card img {
-  vertical-align: middle;
+/* QR Review */
+.qr-review {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Footer */
+footer { 
+  background: #1a1a1a; 
+  color: gold; 
+  text-align: center; 
+  padding: 1rem; 
+  margin-top: 2rem; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .why-choose-container { flex-wrap: wrap; }
+  .center-quote { order: 3; width: 100%; margin-top: 0.5rem; }
+  nav { order: 2; width: 100%; justify-content: center; }
 }
