@@ -1,37 +1,186 @@
-
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: 'Roboto', sans-serif; background-color: #fff; color: #333; }
-header { background-color: #1a1a1a; color: gold; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+body { 
+  margin: 0; 
+  font-family: 'Roboto', sans-serif; 
+  background-color: #fff; 
+  color: #333; 
+}
+
+/* Header */
+header { 
+  background-color: #1a1a1a; 
+  color: gold; 
+  padding: 1rem 2rem; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
 .site-branding { display: flex; align-items: center; }
-.site-logo { height: 30px; margin-right: 0.5rem; }
-.site-title { font-weight: bold; font-size: 1.25rem; }
-.site-phone { font-weight: normal; font-size: 1rem; color: #fff; margin-left: 0.5rem; }
-nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
-nav a { color: gold; text-decoration: none; font-weight: bold; padding: 0.5rem; transition: background-color 0.3s, color 0.3s; }
-nav a:hover { background-color: gold; color: #1a1a1a; border-radius: 4px; }
-/* Static hero */
-.hero-static-container { width: 100%; max-height: 400px; overflow: hidden; }
-.hero-static { width: 100%; height: auto; object-fit: cover; display: block; }
+.site-logo { 
+  height: 30px; 
+  margin-right: 0.5rem; 
+}
+.site-title { 
+  font-weight: bold; 
+  font-size: 1.25rem; 
+}
+.site-phone { 
+  font-weight: normal; 
+  font-size: 1rem; 
+  color: #fff; 
+  margin-left: 0.5rem; 
+  text-decoration: none;
+}
+.site-phone:hover { text-decoration: underline; }
+
+/* Centered “Request a Quote” */
+.center-quote { 
+  flex: 1; 
+  text-align: center; 
+}
+.quote-btn { 
+  color: gold; 
+  text-decoration: none; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  padding: 0.5rem; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+.quote-btn:hover { 
+  background-color: gold; 
+  color: #1a1a1a; 
+  border-radius: 4px; 
+}
+
+/* Main navigation */
+nav { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+  margin-top: 0.5rem; 
+}
+nav a { 
+  color: gold; 
+  text-decoration: none; 
+  font-weight: bold; 
+  padding: 0.5rem; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+nav a:hover { 
+  background-color: gold; 
+  color: #1a1a1a; 
+  border-radius: 4px; 
+}
+
+/* Hero */
+.hero-static-container { 
+  width: 100%; 
+  max-height: 400px; 
+  overflow: hidden; 
+}
+.hero-static { 
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  display: block; 
+}
+
 /* Sections */
-section { padding: 2rem; max-width: 1200px; margin: auto; }
-h2 { color: #d4af37; margin-top: 0; }
+section { 
+  padding: 2rem; 
+  max-width: 1200px; 
+  margin: auto; 
+}
+h2 { 
+  color: #d4af37; 
+  margin-top: 0; 
+}
+
 /* Why Choose Us */
-.why-choose-container { display: flex; flex-wrap: nowrap; gap: 2rem; align-items: center; }
-.why-text { flex: 1; min-width: 280px; }
-.why-img { width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-/* Cards hover effect */
-.card { background: #f7f7f7; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-/* Grids */
-.services-list, .projects-grid, .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.why-choose-container { 
+  display: flex; 
+  flex-wrap: nowrap; 
+  gap: 2rem; 
+  align-items: center; 
+}
+.why-text { 
+  flex: 1; 
+  min-width: 280px; 
+}
+.why-image { 
+  flex: 1; 
+  min-width: 280px; 
+}
+.why-img { 
+  width: 100%; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+}
+
+/* Services & Projects & Contact grid */
+.services-list, 
+.projects-grid, 
+.contact-info { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1rem; 
+}
+
+/* Card hover effect */
+.card { 
+  background: #f7f7f7; 
+  padding: 1rem; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+.card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+}
+
 /* Quote form */
-.quote-form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: auto; }
-.quote-form input, .quote-form select, .quote-form textarea { padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; }
-.quote-form button { padding: 0.75rem; background-color: #d4af37; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s; }
-.quote-form button:hover { background-color: #bfa22e; }
-.quote-btn { font-weight: bold; text-transform: uppercase; }
-footer { background: #1a1a1a; color: gold; text-align: center; padding: 1rem; margin-top: 2rem; }
-iframe { width: 100%; height: 300px; border: none; }
+.quote-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  max-width: 600px; 
+  margin: auto; 
+}
+.quote-form input, 
+.quote-form select, 
+.quote-form textarea { 
+  padding: 0.75rem; 
+  font-size: 1rem; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+.quote-form button { 
+  padding: 0.75rem; 
+  background-color: #d4af37; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+.quote-form button:hover { 
+  background-color: #bfa22e; 
+}
+
+/* Footer */
+footer { 
+  background: #1a1a1a; 
+  color: gold; 
+  text-align: center; 
+  padding: 1rem; 
+  margin-top: 2rem; 
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .why-choose-container { flex-wrap: wrap; }
+  .center-quote { order: 3; width: 100%; margin-top: 0.5rem; }
+  nav { order: 2; width: 100%; justify-content: center; }
 }
