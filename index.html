@@ -6,69 +6,27 @@
   <title>Ciwan Contracting Inc.</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Slider Styles - images will fit within the container */
-    .slider {
-      position: relative;
-      max-width: 100%;
-      height: 400px;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      background-color: #000;
-    }
-    .slides {
-      display: flex;
-      transition: transform 1s ease;
-      width: calc(100% * 6);
-      animation: slideAnimation 24s infinite;
-      height: 100%;
-    }
-    .slides img {
-      flex: 0 0 100%;
-      max-width: 100%;
-      max-height: 100%;
-      margin: auto;
-      object-fit: contain;
-    }
-    @keyframes slideAnimation {
-      0% { transform: translateX(0); }
-      16.66% { transform: translateX(0); }
-      33.32% { transform: translateX(-100%); }
-      49.98% { transform: translateX(-100%); }
-      66.64% { transform: translateX(-200%); }
-      83.3% { transform: translateX(-200%); }
-      100% { transform: translateX(-300%); }
-    }
-    @media (max-width: 768px) {
-      .slider { height: 250px; }
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div>CIWAN CONTRACTING INC. &nbsp;|&nbsp; <span style="color:white; font-weight:normal;">(647) 978-0768</span></div>
+    <div class="site-branding">
+      <img src="logo.png" alt="Ciwan Contracting Logo" class="site-logo" />
+      <span class="site-title">CIWAN CONTRACTING INC.</span>
+      <span class="site-phone">&nbsp;|&nbsp;(647) 978-0768</span>
+    </div>
     <nav>
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#projects">Projects</a>
       <a href="index.html#testimonials">Testimonials</a>
       <a href="index.html#contact">Contact</a>
-    </nav>
-    <nav>
-      <a href="quote.html" style="font-weight: bold; text-transform: uppercase;">Request a Quote</a>
+      <a href="quote.html" class="quote-btn">Request a Quote</a>
     </nav>
   </header>
 
-  <!-- Hero Image Carousel -->
-  <div class="slider">
-    <div class="slides">
-      <img src="0005.jpg" alt="Project Image 1" />
-      <img src="0006.jpg" alt="Project Image 2" />
-      <img src="0007.jpg" alt="Project Image 3" />
-      <img src="0009.jpg" alt="Project Image 4" />
-      <img src="0010.jpg" alt="Project Image 5" />
-      <img src="0011.jpg" alt="Project Image 6" />
-    </div>
+  <!-- Static Header Image -->
+  <div class="hero-static-container">
+    <img src="header.png" alt="Featured Projects" class="hero-static" />
   </div>
 
   <section id="about">
@@ -77,15 +35,15 @@
   </section>
 
   <section id="why-choose-us">
-    <h2>Why Choose Us</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-      <div style="flex: 1; min-width: 280px;">
+    <h2 style="margin-bottom: 0.5rem;">Why Choose Us</h2>
+    <div class="why-choose-container">
+      <div class="why-text">
         <p>Ciwan Contracting Inc. is a trusted name in home renovation and improvement services throughout Toronto, the GTA, and Ontario. Our experienced team brings dedication, precision, and transparency to every job we take on—big or small. Whether you're upgrading your home or transforming a commercial space, we’ll deliver results that meet your expectations in both quality and budget. From exterior finishes to complete remodels, our team is ready to bring your project vision to life.</p>
         <p>We specialize in a wide range of premium renovation solutions and take the time to collaborate with you on the best approach for your goals.</p>
         <p><strong>Call Us Today:</strong> (647) 978-0768</p>
       </div>
-      <div style="flex: 1; min-width: 280px;">
-        <img src="hero-placeholder.jpg" alt="Beautiful renovated home" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
+      <div class="why-image">
+        <img src="why-choose-us.png" alt="Charming home exterior" class="why-img" />
       </div>
     </div>
   </section>
