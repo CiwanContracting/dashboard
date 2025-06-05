@@ -2,14 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ciwan Contracting Inc.</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Slider Styles */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .slides {
+      display: flex;
+      width: calc(100% * 6);
+      animation: slideAnimation 24s infinite;
+    }
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slideAnimation {
+      0% { transform: translateX(0); }
+      16.66% { transform: translateX(0); }
+      33.32% { transform: translateX(-100%); }
+      49.98% { transform: translateX(-100%); }
+      66.64% { transform: translateX(-200%); }
+      83.3% { transform: translateX(-200%); }
+      100% { transform: translateX(-300%); }
+    }
+    @media (max-width: 768px) {
+      .slider { height: 250px; }
+      .slides img { height: 250px; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div>CIWAN CONTRACTING INC. &nbsp;|&nbsp; <span style="color:white; font-weight:normal;">(123) 456-7890</span></div>
+    <div>CIWAN CONTRACTING INC. &nbsp;|&nbsp; <span style="color:white; font-weight:normal;">(647) 978-0768</span></div>
     <nav>
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
@@ -22,8 +56,16 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <div class="hero-text">Quality Craftsmanship Since 2013</div>
+  <!-- Hero Image Carousel -->
+  <div class="slider">
+    <div class="slides">
+      <img src="0005.jpg" alt="Project Image 1" />
+      <img src="0006.jpg" alt="Project Image 2" />
+      <img src="0007.jpg" alt="Project Image 3" />
+      <img src="0009.jpg" alt="Project Image 4" />
+      <img src="0010.jpg" alt="Project Image 5" />
+      <img src="0011.jpg" alt="Project Image 6" />
+    </div>
   </div>
 
   <section id="about">
@@ -31,19 +73,42 @@
     <p>With over a decade of experience, Ciwan Contracting Inc. delivers high-quality renovations and construction services across Ontario. We specialize in residential and commercial projects, always putting craftsmanship, professionalism, and customer satisfaction first.</p>
   </section>
 
+  <section id="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+      <div style="flex: 1; min-width: 280px;">
+        <p>Ciwan Contracting Inc. is a trusted name in home renovation and improvement services throughout Toronto, the GTA, and Ontario. Our experienced team brings dedication, precision, and transparency to every job we take on—big or small. Whether you're upgrading your home or transforming a commercial space, we’ll deliver results that meet your expectations in both quality and budget. From exterior finishes to complete remodels, our team is ready to bring your project vision to life.</p>
+        <p>We specialize in a wide range of premium renovation solutions and take the time to collaborate with you on the best approach for your goals.</p>
+        <p><strong>Call Us Today:</strong> (647) 978-0768</p>
+      </div>
+      <div style="flex: 1; min-width: 280px;">
+        <img src="hero-placeholder.jpg" alt="Beautiful renovated home" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
+      </div>
+    </div>
+  </section>
+
   <section id="services">
     <h2>Our Services</h2>
     <div class="services-list">
-      <div class="card">Basement Renovations</div><div class="card">Kitchen Remodeling</div><div class="card">Bathroom Renovations</div>
-      <div class="card">Framing & Drywall</div><div class="card">Painting</div><div class="card">Flooring Installation</div>
-      <div class="card">Tiling</div><div class="card">Decks & Fences</div><div class="card">General Contracting</div><div class="card">Other</div>
+      <div class="card">Basement Renovations</div>
+      <div class="card">Kitchen Remodeling</div>
+      <div class="card">Bathroom Renovations</div>
+      <div class="card">Framing & Drywall</div>
+      <div class="card">Painting</div>
+      <div class="card">Flooring Installation</div>
+      <div class="card">Tiling</div>
+      <div class="card">Decks & Fences</div>
+      <div class="card">General Contracting</div>
+      <div class="card">Other</div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Recent Projects</h2>
     <div class="projects-grid">
-      <div class="card">Project 1</div><div class="card">Project 2</div><div class="card">Project 3</div>
+      <div class="card">Project 1</div>
+      <div class="card">Project 2</div>
+      <div class="card">Project 3</div>
     </div>
   </section>
 
@@ -61,8 +126,8 @@
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact-info">
-      <div class="card">Phone: (123) 456-7890</div>
-      <div class="card">Email: info@ciwancontracting.com</div>
+      <div class="card">Phone: (647) 978-0768</div>
+      <div class="card">Email: ciwancontracting@gmail.com</div>
     </div>
   </section>
 
