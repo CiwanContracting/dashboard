@@ -54,3 +54,18 @@ html {scroll-behavior:smooth}body{margin:0;font-family:'Roboto',sans-serif;backg
 /* QR Review */.qr-review{text-align:center;margin:2rem 0}.qr-review img{width:150px}
 /* Footer */footer{padding:1rem;margin-top:2rem}
 /* Responsive */@media(max-width:768px){.center-quote,nav{width:100%;text-align:center;order:2;margin-top:1rem}}
+
+
+/* Uniform card hover style */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(63,0,255,0.4);
+}
+
+/* Center footer text */
+footer {
+  text-align: center !important;
+}
